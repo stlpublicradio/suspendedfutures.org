@@ -48,8 +48,8 @@ DEFAULT_MAX_AGE = 20
 RELOAD_TRIGGER = False
 RELOAD_CHECK_INTERVAL = 60
 
-# PRODUCTION_SERVERS = ['cron.nprapps.org']
-# STAGING_SERVERS = ['cron-staging.nprapps.org']
+PRODUCTION_SERVERS = ['']
+STAGING_SERVERS = ['']
 
 # Should code be deployed to the web/cron servers?
 DEPLOY_TO_SERVERS = False
@@ -178,10 +178,10 @@ def configure_targets(deployment_target):
 
     if deployment_target == 'production':
         S3_BUCKET = PRODUCTION_S3_BUCKET
-        S3_BASE_URL = 'http://%s/%s' % (S3_BUCKET, PROJECT_SLUG)
-        S3_DEPLOY_URL = 's3://%s/%s' % (S3_BUCKET, PROJECT_SLUG)
+        S3_BASE_URL = 'http://suspendedfutures.org'
+        S3_DEPLOY_URL = 's3://suspendedfutures.org'
         SERVERS = PRODUCTION_SERVERS
-        SERVER_BASE_URL = 'http://%s/%s' % (SERVERS[0], PROJECT_SLUG)
+        SERVER_BASE_URL = 'http://%s' % (SERVERS[0])
         DISQUS_SHORTNAME = ''
         DEBUG = False
         ASSETS_MAX_AGE = 86400

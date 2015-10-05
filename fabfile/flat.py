@@ -122,4 +122,3 @@ def delete_folder(bucket_name, dst):
         print 'Deleting %s' % (key.key)
 
         key.delete()
-

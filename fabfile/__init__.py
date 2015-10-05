@@ -172,7 +172,7 @@ def deploy(remote='origin', reload=False):
     flat.deploy_folder(
         app_config.S3_BUCKET,
         'www',
-        app_config.PROJECT_SLUG,
+        '',
         headers={
             'Cache-Control': 'max-age=%i' % app_config.DEFAULT_MAX_AGE
         },
@@ -182,7 +182,7 @@ def deploy(remote='origin', reload=False):
     flat.deploy_folder(
         app_config.S3_BUCKET,
         'www/assets',
-        '%s/assets' % app_config.PROJECT_SLUG,
+        '/assets',
         headers={
             'Cache-Control': 'max-age=%i' % app_config.ASSETS_MAX_AGE
         }
