@@ -1,47 +1,73 @@
 {% extends '_base.html' %}
 
-{% block header_content %}
-<header>
+{% block content %}
+<div class="intro">
     <div class="container">
         <div class="row">
-            <div class="col-md-12">
-                <h1>{{ COPY.content.project_name|smarty }}</h1>
-                <h2>{{ COPY.content.lorem_ipsum|smarty }}</h2>
+            <div class="col-md-8 col-md-offset-2">
+                <p class="lead">{{ COPY.content.intro_graf_1 }}</p>
+                <p>{{ COPY.content.intro_graf_2 }}</p>
             </div>
         </div>
     </div>
-</header>
-{% endblock %}
-
-
-{% block content %}
-<h1>{{ COPY.content.project_name }}</h1>
-
-<div id="story-meta">
-    <p class="byline">by <span>{{ COPY.content.byline }}</span></p>
-    <p class="dateblock">
-        <span class="date">{{ COPY.content.pubdate }}</span>
-        <span class="time"> {{ COPY.content.pubtime }}</span>
-    </p>
 </div>
-
-<h2>Example COPY list</h2>
-<dl>
-    {% for row in COPY.example_list %}
-    <dt>{{ row.term }}</dt><dd>{{ row.definition }}</dd>
-    {% endfor %}
-</dl>
-
-<h2 class="knockout-example">JST example</h2>
-<p id="template-example"></p>
-{% endblock %}
-
-
-{% block wide_content %}
-<div class="row">
-    <div class="col-md-12">
-        <h2 class="knockout-example">{{ COPY.content.footer_title }}</h2>
-        <p>{{ COPY.content.lorem_ipsum }}</p>
+{% if COPY.content.jumbotron %}
+    <div class="join">
+        <div class="container">
+            <h1>{{ COPY.content.jumbotron_title }}</h1>
+            <div class="row">
+                <div class="col-md-8 col-md-offset-2">
+                    <p>{{ COPY.content.jumbotron_text }}</p>
+                    <p>{{ COPY.content.jumbotron_text_2 }}</p>
+                    <p><a class="btn btn-primary btn-lg" href="{{ COPY.content.jumbotron_link }}" role="button">{{ COPY.content.jumbotron_link_text }}</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endif %}
+<div class="tune-in">
+    <div class="container">
+        <h1>{{ COPY.content.tune_in_title }}</h1>
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <ul>
+                    <li>{{ COPY.content.tune_in_1 }}</li>
+                    <li>{{ COPY.content.tune_in_2 }}</li>
+                    <li>{{ COPY.content.tune_in_3 }}</li>
+                    <li>{{ COPY.content.tune_in_4 }}</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="tweet">
+    <div class="container">
+        <h1>{{ COPY.content.tweet_title }}</h1>
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <p>{{ COPY.content.tweet_1 }}</p>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="faq">
+    <div class="container">
+        <h1>{{ COPY.content.more_info_title }}</h1>
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <p>{{ COPY.content.more_info_1 }}</p>
+                <div class="row">
+                    <div class="col-md-6">
+                        <p class="question">{{ COPY.content.more_info_q_1 }}</p>
+                        <p class="answer">{{ COPY.content.more_info_a_1 }}</p>
+                    </div>
+                    <div class="col-md-6">
+                        <p class="question">{{ COPY.content.more_info_q_2 }}</p>
+                        <p class="answer">{{ COPY.content.more_info_a_2 }}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
 {% endblock %}

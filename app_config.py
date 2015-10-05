@@ -37,7 +37,7 @@ ASSETS_SLUG = 'suspendedfutures.org'
 """
 DEPLOYMENT
 """
-PRODUCTION_S3_BUCKET = 'apps.stlpublicradio.org'
+PRODUCTION_S3_BUCKET = 'suspendedfutures.org'
 
 STAGING_S3_BUCKET = 'stlpr-stg'
 
@@ -91,7 +91,7 @@ DEBUG = True
 """
 COPY EDITING
 """
-COPY_GOOGLE_DOC_KEY = '0AlXMOHKxzQVRdHZuX1UycXplRlBfLVB0UVNldHJYZmc'
+COPY_GOOGLE_DOC_KEY = '1an_iGUCJY8Ylz-wRb1H1kSPiNJWBpcX6qt8QjDo_HxA'
 COPY_PATH = 'data/copy.xlsx'
 
 """
