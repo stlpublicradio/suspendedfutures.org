@@ -53,6 +53,9 @@
             {% endblock wide_content %}
     </section>
 
+    {% include '_share_modal.html' %}
+
+
     {% include '_footer.html' %}
 
 
@@ -63,17 +66,6 @@
     {{ JS.push('js/lib/modernizr.js') }}
     {{ JS.push('js/lib/bootstrap.js') }}
     {{ JS.push('js/lib/moment.js') }}
-
-    {# commented out ZeroClipboard.js - bj 2015-07-14 #}
-    {# {{ JS.push('js/lib/ZeroClipboard.js') }} #}
-
-    {# uncomment both files to use simpleStorage #}
-    {# {{ JS.push('js/lib/simpleStorage.js') }} #}
-    {# {{ JS.push('js/storage.js') }} #}
-
-    {% if RELOAD_TRIGGER %}
-    {{ JS.push('js/reload.js') }}
-    {% endif %}
 
     {{ JS.push('js/copy.js') }}
     {{ JS.push('js/templates.js') }}
